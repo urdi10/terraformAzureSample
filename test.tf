@@ -34,7 +34,7 @@ resource "azurerm_public_ip" "myterraformpublicip" {
     location                     = "${azurerm_resource_group.myterraformgroup.location}"
     resource_group_name          = "${azurerm_resource_group.myterraformgroup.name}"
     public_ip_address_allocation = "dynamic"
-    domain_name_label            = "${azurerm_virtual_network.myterraformnetwork.name}"
+    domain_name_label            = "${azurerm_virtual_network.myterraformgroup.name}"
 
     tags {
         environment = "Terraform Demo"
