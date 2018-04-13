@@ -45,7 +45,7 @@ resource "azurerm_network_security_group" "temyterraformpublicipnsg" {
     name                = "${azurerm_virtual_network.myterraformnetwork.name}-networkSecurityGroup"
     location            = "${azurerm_resource_group.myterraformgroup.location}"
     resource_group_name = "${azurerm_resource_group.myterraformgroup.name}"
-    
+
     security_rule {
         name                       = "SSH"
         priority                   = 1001
@@ -67,6 +67,24 @@ resource "azurerm_network_security_group" "temyterraformpublicipnsg" {
         destination_port_range     = "80"
         source_address_prefix      = "*"
         destination_address_prefix = "*"
+    }
+
+    tags {
+        environment = "Terraform Demo"
+    }
+}
+
+
+resource "azurerm_network_interface" "myterraformnic" {
+    name                = "${azurerm_virtual_network.myterraformnetwork.name}-myNIC"
+    location            = "${azurerm_resource_group.myterraformgroup.location}"
+    resource_group_name = "${azurerm_resource_group.myterraformgroup.name}"
+
+    ip_configuration {
+        name                          = "myNicConfiguration"
+        subnet_id                     = "${azurerm_subnet.myterraformsubnet.id}"
+        private_ip_address_allocation = "dynamic"
+        public_ip_address_id          = "${azurerm_public_ip.myterraformpublicip.id}"
     }
 
     tags {
