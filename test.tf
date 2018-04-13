@@ -34,7 +34,7 @@ resource "azurerm_public_ip" "myterraformpublicip" {
     location                     = "${azurerm_resource_group.myterraformgroup.location}"
     resource_group_name          = "${azurerm_resource_group.myterraformgroup.name}"
     public_ip_address_allocation = "dynamic"
-    domain_name_label            = "${azurerm_resource_group.myterraformgroup.name}"
+    domain_name_label            = "tfvm2018jj"
 
     tags {
         environment = "Terraform Demo"
@@ -45,7 +45,7 @@ resource "azurerm_public_ip" "myterraformpublicip" {
 resource "azurerm_network_security_group" "temyterraformpublicipnsg" {
     name                = "${azurerm_virtual_network.myterraformnetwork.name}-networkSecurityGroup"
     location            = "${azurerm_resource_group.myterraformgroup.location}"
-    resource_group_name = "azuretf2018"
+    resource_group_name = "${azurerm_resource_group.myterraformgroup.name}"
 
     security_rule {
         name                       = "SSH"
