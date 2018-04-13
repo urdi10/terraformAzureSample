@@ -45,7 +45,7 @@ resource "azurerm_network_security_group" "temyterraformpublicipnsg" {
     name                = "${azurerm_virtual_network.myterraformnetwork.name}-networkSecurityGroup"
     location            = "${azurerm_resource_group.myterraformgroup.location}"
     resource_group_name = "${azurerm_resource_group.myterraformgroup.name}"
-    ;
+    
     security_rule {
         name                       = "SSH"
         priority                   = 1001
