@@ -128,6 +128,7 @@ resource "azurerm_virtual_machine" "myterraformvm" {
   storage_image_reference {
     publisher = "Canonical"
     offer     = "UbuntuServer"
+    sku       = "18.04-LTS"
     version   = "latest"
   }
 
