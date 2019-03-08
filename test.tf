@@ -1,7 +1,7 @@
 provider "azurerm" {}
 
 resource "azurerm_resource_group" "myterraformgroup" {
-  name     = "azureTF-rg"
+  name     = "hmis19TF-rg"
   location = "westus"
 
   tags {
@@ -32,7 +32,7 @@ resource "azurerm_public_ip" "myterraformpublicip" {
   location                     = "${azurerm_resource_group.myterraformgroup.location}"
   resource_group_name          = "${azurerm_resource_group.myterraformgroup.name}"
   public_ip_address_allocation = "dynamic"
-  domain_name_label            = "tfvm2018jj"
+  domain_name_label            = "hmis19tf"
 
   tags {
     environment = "Terraform Demo"
