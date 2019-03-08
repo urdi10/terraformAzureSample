@@ -116,13 +116,13 @@ resource "azurerm_virtual_machine" "myterraformvm" {
   location              = "${azurerm_resource_group.myterraformgroup.location}"
   resource_group_name   = "${azurerm_resource_group.myterraformgroup.name}"
   network_interface_ids = ["${azurerm_network_interface.myterraformnic.id}"]
-  vm_size               = "Standard_A3"
+  vm_size               = "Standard_A3"                                         ## "Standard_DS1_v2"
 
   storage_os_disk {
     name              = "myOsDisk"
     caching           = "ReadWrite"
     create_option     = "FromImage"
-    managed_disk_type = "Premium_LRS"
+    managed_disk_type = "Standard_LRS" # "Premium_LRS"
   }
 
   storage_image_reference {
