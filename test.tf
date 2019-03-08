@@ -2,7 +2,7 @@ provider "azurerm" {}
 
 resource "azurerm_resource_group" "myterraformgroup" {
   name     = "hmis19TF-rg"
-  location = "westus"
+  location = "eastus"      ## "westus"
 
   tags {
     environment = "Terraform Demo"
