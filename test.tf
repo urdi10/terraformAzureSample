@@ -142,7 +142,7 @@ resource "azurerm_virtual_machine" "myterraformvm" {
 
     ssh_keys {
       path     = "/home/azureuser/.ssh/authorized_keys"
-      key_data = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCwyhN7++iT/2E3/D+AcCEUjN+aZEDnPmnL+nhROEfXdx9b2OVYekwO48k4/AbNQm5S6ueceExwJXTSe//KpUfX5zd8bx82LcCb36Rm9KpGuy0tyh5cMWU9swxEP0KDd0lySrtvHJF0tuK/CWUl3FOH8HIDqMWR+Ks5dD1EEymv8kfGa1NXoXQZS1xKiqMQP7hCsmVQeJvoLOk3XYObFVBsUOAXEPL8usOd5Vte/z7eW3JVhnYKcqk5aHc7SsV9O/uuzhMM89t9GBmC7vwJGKuESwX8fus0UOk+eGnwEEHxa6qp/zTQuQ8E9WNl/wcVRy87vfoIhuA555Vi4BdjEp67 jjcanada@ual.es"
+      key_data = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDY5QzIFFqOgc6M2irASvFAaZwbUzwu1JOUbL36ZFYOojIfntmjqXpZGIHpbYCUwVUB8cnW9NM/1IQE7O6qMLh1RGnPNvwjvlSVNCRP0nAMVI+XiGo24432rGWgIQfXjt+/WZzLVPx/UG0XHEHenwNcHEvIMWbhDS9yrPLo5c+/l5XjPTeCQ5LseCZzPPAXUxwnIJ05YwcrmblY5iXBeBLGVV6mvlY8OmQpVQct+vpcgwygcx0m1gA/rgTHJPAF/r9X7B80NC2a43XcsDTvi5LnqofQJBJKlSIJsZWZl0jvyOvRnnSKJ/XtaAqdnmsjOKLCqX+gSKZzaLMOgLyp5Egn aleja@MSI"
     }
   }
 
